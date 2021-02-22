@@ -10,7 +10,7 @@ export default function useDataFetcher(query) {
     getSearches(query)
       .then((res) => {
         // console.log(res);
-        setSearchResults(res);
+        setSearchResults(res.hits);
         setIsLoading(false);
       })
       .catch(() => {

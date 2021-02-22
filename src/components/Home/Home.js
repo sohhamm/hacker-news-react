@@ -1,5 +1,6 @@
 import React from 'react';
 import useDataFetcher from '../../hooks/useDataFetcher';
+import Post from '../Post/Post';
 
 export default function Home() {
   const [search, setSearch] = React.useState('');
@@ -36,9 +37,9 @@ export default function Home() {
       ) : (
         searchResults.map((ele, index) => {
           return (
-            <div key={index}>
-              <a href={ele.url}>{ele.title}</a>
-            </div>
+            <Post objectID={ele.objectID} key={index}>
+              {ele.title}
+            </Post>
           );
         })
       )}
