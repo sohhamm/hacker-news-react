@@ -1,6 +1,7 @@
 import React from 'react';
 import useDataFetcher from '../../hooks/useDataFetcher';
 import Post from '../Post/Post';
+import classes from './Home.module.css';
 
 export default function Home() {
   const [search, setSearch] = React.useState('');
@@ -23,8 +24,9 @@ export default function Home() {
   return (
     <>
       <div>
-        <form onSubmit={handleSubmit}>
+        <form className={classes.form} onSubmit={handleSubmit}>
           <input
+            className="input is-primary is-rounded"
             type="text"
             value={search}
             onChange={handleChange}

@@ -1,9 +1,5 @@
 import React from 'react';
-import useDataFetcher from '../../hooks/useDataFetcher';
-
 import { useHistory } from 'react-router-dom';
-
-// export const idContext = React.createContext();
 
 export default function Post({ children, objectID }) {
   const history = useHistory();

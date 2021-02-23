@@ -29,8 +29,15 @@ export default function PostDetails() {
     };
     getPost();
   }, [id]);
+
+  const handleBack = () => {
+    window.history.back();
+  };
   return (
     <div on>
+      <button className="button is-primary" onClick={handleBack}>
+        BACK
+      </button>
       <a href={post.url} target="_blank" rel="noreferrer">
         {post.title}
       </a>
