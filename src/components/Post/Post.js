@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import classes from './Post.module.scss';
 
 export default function Post({ children, objectID }) {
   const history = useHistory();
@@ -10,8 +11,8 @@ export default function Post({ children, objectID }) {
   };
   return (
     <>
-      <div className="box" onClick={() => handleClick(objectID)}>
-        {children}
+      <div className={classes.list} onClick={() => handleClick(objectID)}>
+        <p>{children}</p>
       </div>
     </>
   );

@@ -1,21 +1,77 @@
-.container{
-    display: flex;
-    flex-flow: column wrap;
+.container {
+  display: flex;
+  flex-flow: column wrap;
 }
 
-.postDetails{
-    display:flex;
-    flex-flow: column wrap;
-    height: 50vh;
-    width: 100vw;
-    justify-content: center;
-align-items: center;
+.postDetails {
+  display: flex;
+  flex-flow: column wrap;
+  height: 50vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
 }
 
-.title{
- font-size: large;
+.title {
+  font-size: 2rem;
+  color: black;
+  text-decoration: underline;
+  margin-bottom: 2%;
+}
+.author {
+  font-style: oblique;
 }
 
-.points{
-font-style: italic;
+.points {
+  font-style: italic;
+}
+.points > span {
+  border: #00d1b2 solid 2px;
+  padding: 10px;
+  border-radius: 7.5px;
+}
+.list {
+  border-bottom: 0.5px solid #00d1b2;
+  text-align: left;
+  margin-right: 9%;
+  margin-left: 9%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-weight: 300;
+}
+.comments {
+  font-weight: bold;
+  text-align: left;
+  margin-right: 9%;
+  margin-left: 9%;
+  color: #00d1b2;
+  padding-bottom: 2%;
+}
+
+.button1 {
+  position: absolute;
+  width: 150px;
+  height: 45px;
+  left: 25px;
+  top: 211px;
+  color: white;
+  background: #00d1b2;
+  border-radius: 7.5px;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+.button2 {
+  width: 150px;
+  height: 45px;
+  color: white;
+  background: #00d1b2;
+  border-radius: 7.5px;
+}
+
+.progress {
+  margin: 10%;
 }

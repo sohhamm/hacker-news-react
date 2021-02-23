@@ -43,13 +43,18 @@ export default function PostDetails() {
   return (
     <div className="content">
       {isloading ? (
-        <progress
-          class="progress is-large
+        <div className={classes.progress}>
+          <progress
+            className="progress is-large
          is-primary"
-          max="100"
-        />
+            max="100"
+          />
+        </div>
       ) : (
         <div className={classes.container}>
+          <button className={classes.button1} onClick={handleBack}>
+            BACK
+          </button>
           <div className={classes.postDetails}>
             <a
               className={classes.title}
@@ -59,22 +64,31 @@ export default function PostDetails() {
             >
               {post.title}
             </a>
-            <p>author:{post.author}</p>
-            <p className={classes.points}>points:{post.points}</p>
-            <button className="button is-primary" onClick={handleBack}>
-              BACK
-            </button>
+            <p className={classes.author}>Author-{post.author}</p>
+            <p className={classes.points}>
+              <span>
+                points: <strong>{post.points}</strong>
+              </span>
+            </p>
           </div>
-          {post.comments.map((e) => {
-            let element = document.createElement('div');
-            element.innerHTML = e.text;
-            return (
-              <p key={e.id}>
-                {element.innerText}{' '}
-                <span className="tag is-light">{e.created_at}</span>
-              </p>
-            );
-          })}
+          <div className>
+            <div className={classes.comments}>COMMENTS</div>
+            {post.comments.map((e) => {
+              let element = document.createElement('div');
+              element.innerHTML = e.text;
+              return (
+                <div className={classes.list} key={e.id}>
+                  {element.innerText}
+                  {/* <span className="tag is-light">{e.created_at}</span> */}
+                </div>
+              );
+            })}
+            <div className={classes.buttonDiv}>
+              <button className={classes.button2} onClick={handleBack}>
+                BACK
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>
