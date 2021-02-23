@@ -10,7 +10,9 @@ export default function Post({ children, objectID }) {
   };
   return (
     <>
-      <div onClick={() => handleClick(objectID)}>{children}</div>
+      <div className="box" onClick={() => handleClick(objectID)}>
+        {children}
+      </div>
     </>
   );
 }

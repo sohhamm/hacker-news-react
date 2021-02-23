@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.postDetails{
+    display:flex;
+    flex-flow: column wrap;
+    height: 50vh;
+    width: 100vw;
+    justify-content: center;
+align-items: center;
+}
+
+.title{
+ font-size: large;
+}
+
+.points{
+font-style: italic;
+}

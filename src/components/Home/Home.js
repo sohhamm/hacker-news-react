@@ -1,7 +1,7 @@
 import React from 'react';
 import useDataFetcher from '../../hooks/useDataFetcher';
 import Post from '../Post/Post';
-import classes from './Home.module.css';
+import classes from './Home.module.scss';
 
 export default function Home() {
   const [search, setSearch] = React.useState('');
@@ -35,7 +35,11 @@ export default function Home() {
         </form>
       </div>
       {isLoading ? (
-        <p>spinner</p>
+        <progress
+          class="progress is-large
+         is-primary"
+          max="100"
+        />
       ) : (
         searchResults.map((ele, index) => {
           return (
